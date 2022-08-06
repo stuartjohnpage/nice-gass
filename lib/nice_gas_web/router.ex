@@ -17,6 +17,8 @@ defmodule NiceGasWeb.Router do
   scope "/", NiceGasWeb do
     pipe_through :browser
 
+    get "/users", UserController, :index
+    get "/users/:id", UserController, :show
     get "/", PageController, :index
     get "/nicegas", NiceGasController, :index
   end

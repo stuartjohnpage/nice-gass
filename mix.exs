@@ -1,9 +1,9 @@
-defmodule NiceGas.MixProject do
+defmodule Nicegass.MixProject do
   use Mix.Project
 
   def project do
     [
-      app: :nice_gas,
+      app: :nice_gass,
       version: "0.1.0",
       elixir: "~> 1.12",
       elixirc_paths: elixirc_paths(Mix.env()),
@@ -19,7 +19,7 @@ defmodule NiceGas.MixProject do
   # Type `mix help compile.app` for more information.
   def application do
     [
-      mod: {NiceGas.Application, []},
+      mod: {Nicegass.Application, []},
       extra_applications: [:logger, :runtime_tools]
     ]
   end

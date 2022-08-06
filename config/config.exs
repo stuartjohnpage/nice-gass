@@ -7,14 +7,14 @@
 # General application configuration
 import Config
 
-config :nice_gas,
-  ecto_repos: [NiceGas.Repo]
+config :nice_gass,
+  ecto_repos: [Nicegass.Repo]
 
 # Configures the endpoint
-config :nice_gas, NiceGasWeb.Endpoint,
+config :nice_gass, NicegassWeb.Endpoint,
   url: [host: "localhost"],
-  render_errors: [view: NiceGasWeb.ErrorView, accepts: ~w(html json), layout: false],
-  pubsub_server: NiceGas.PubSub,
+  render_errors: [view: NicegassWeb.ErrorView, accepts: ~w(html json), layout: false],
+  pubsub_server: Nicegass.PubSub,
   live_view: [signing_salt: "cYoVjHlH"]
 
 # Configures the mailer
@@ -24,7 +24,7 @@ config :nice_gas, NiceGasWeb.Endpoint,
 #
 # For production it's recommended to configure a different adapter
 # at the `config/runtime.exs`.
-config :nice_gas, NiceGas.Mailer, adapter: Swoosh.Adapters.Local
+config :nice_gass, Nicegass.Mailer, adapter: Swoosh.Adapters.Local
 
 # Swoosh API client is needed for adapters other than SMTP.
 config :swoosh, :api_client, false

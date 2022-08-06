@@ -5,23 +5,23 @@ import Config
 # The MIX_TEST_PARTITION environment variable can be used
 # to provide built-in test partitioning in CI environment.
 # Run `mix help test` for more information.
-config :nice_gas, NiceGas.Repo,
+config :nice_gass, Nicegass.Repo,
   username: "postgres",
   password: "postgres",
   hostname: "localhost",
-  database: "nice_gas_test#{System.get_env("MIX_TEST_PARTITION")}",
+  database: "nice_gass_test#{System.get_env("MIX_TEST_PARTITION")}",
   pool: Ecto.Adapters.SQL.Sandbox,
   pool_size: 10
 
 # We don't run a server during test. If one is required,
 # you can enable the server option below.
-config :nice_gas, NiceGasWeb.Endpoint,
+config :nice_gass, NicegassWeb.Endpoint,
   http: [ip: {127, 0, 0, 1}, port: 4002],
   secret_key_base: "6uNOIhCkCNXWKgHLxHV8ZILZSIaPP6geeQNHu7XjOycSz6QZXNrADRt7BM3c9YBa",
   server: false
 
 # In test we don't send emails.
-config :nice_gas, NiceGas.Mailer, adapter: Swoosh.Adapters.Test
+config :nice_gass, Nicegass.Mailer, adapter: Swoosh.Adapters.Test
 
 # Print only warnings and errors during test
 config :logger, level: :warn
